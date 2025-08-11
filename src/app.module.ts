@@ -15,10 +15,10 @@ import { Report } from './reports/report.entity';
       database: 'db.sqlite',
       // Connexion de l'entité au root connection.
       entities: [User, Report],
-      synchronize: true
+      synchronize: true,
     }),
     UsersModule,
-    ReportsModule
+    ReportsModule,
   ],
   controllers: [AppController],
   providers: [AppService],
