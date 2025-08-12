@@ -15,6 +15,7 @@ import { Report } from './reports/report.entity';
       database: 'db.sqlite',
       // Connexion de l'entité au root connection.
       entities: [User, Report],
+      // Seulement pour environnement de développement : regarde les différentes entités et màj automatiquement la structure d'une bdd => pas nécessité de migration.
       synchronize: true,
     }),
     UsersModule,
