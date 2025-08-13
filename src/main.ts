@@ -5,7 +5,7 @@ import { AppModule } from './app.module';
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   app.useGlobalPipes(
-    // Valide les données contenues dans la requête entrante.
+    // Assure qu'il n'y ait pas de propriété étrangère dans le body non désirée.
     new ValidationPipe({
       whitelist: true,
     }),
